@@ -1,148 +1,231 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Resume - Sergio Cancán</title>
+    <title>About - Sergio Cancan</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        body {
+            background-color: #fafafa;
+        }
+        .about-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4em 2em;
+            text-align: center;
+        }
+        .about-hero img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1em;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1em;
+            margin-top: 2em;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+        .section {
+            margin-top: 4em;
+            text-align: left;
+        }
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.4em;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+        h3 {
+            margin-top: 1.5em;
+            font-size: 1.1em;
+            color: #444;
+        }
+        p, li {
+            color: #555;
+            line-height: 1.6;
+        }
+        ul {
+            margin-left: 1.2em;
+        }
+        .btn-resume {
+            display: inline-block;
+            margin-top: 2em;
+            padding: 0.75em 2em;
+            background-color: #4a90e2;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn-resume:hover {
+            background-color: #3a7ad9;
+        }
+        .section a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        .section a:hover {
+            text-decoration: underline;
+        }
+        .section.personal {
+            background: #f6f8fa;
+            border-radius: 12px;
+            padding: 3em 2em;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 10px;
+        }
+        .lightbox-caption {
+            text-align: center;
+            color: #ccc;
+            padding: 10px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .lightbox-close:hover {
+            color: #bbb;
+        }
+        @media (max-width: 700px) {
+            .lightbox-content {
+                width: 95%;
+            }
+        }
+    </style>
 </head>
-<body class="is-preload">
+<body>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Header -->
-        <header id="header">
-            <a href="index.html" class="logo"><strong>Sergio</strong> <span>Cancán</span></a>
-            <nav>
-                <a href="#menu">Menu</a>
-            </nav>
-        </header>
-
-        <!-- Menu -->
-        <nav id="menu">
-            <ul class="links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-
-            </ul>
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="logo">Sergio Cancan</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html" class="active">About</a>
         </nav>
+    </header>
 
-        <!-- Main -->
-        <div id="main" class="alt">
-
-            <!-- One -->
-            <section id="one">
-                <div class="inner">
-                    <header class="major">
-                        <h1>Resume</h1>
-                    </header>
-
-                    <section>
-                        <h2>Summary</h2>
-                        <p>Diligent and innovative Mechatronics Engineering student at Universidad de Ingeniería y Tecnología (UTEC). Demonstrated skills in high-level engineering challenges, research on vacuum-powered artificial muscles, and API development with machine learning for industrial applications.</p>
-                    </section>
-
-                    <section>
-                        <h2>Education</h2>
-                        <p><strong>Universidad de Ingeniería y Tecnología (UTEC)</strong><br />
-                        Bachelor of Mechatronics Engineering (Top 33% - GPA: 2.99)</p>
-                    </section>
-
-                    <section>
-                        <h2>Experience</h2>
-                        <ul>
-                            <li><strong>Culqi</strong> (Trainee of Machine Learning Engineer, Apr 2024 - Present)<br />
-                                Transitioned local ML solutions to AWS cloud; optimized deployment strategies.
-                            </li>
-                            <li><strong>UTEC Micro & Biorobotics Lab</strong> (Research Assistant, Apr 2023 - Jul 2023)<br />
-                                Designed vacuum-powered artificial muscles and prototypes for exoskeletons.
-                            </li>
-                            <li><strong>Rimac Seguros y Reaseguros</strong> (Trainee of Machine Learning Engineer, Jan 2023 - Mar 2023)<br />
-                                Developed 2 APIs with ML models for integration; enhanced department frameworks.
-                            </li>
-                        </ul>
-                    </section>
-
-                    <section>
-                        <h2>Skills</h2>
-                        <p><strong>Programming:</strong> Python, MATLAB, SQL, Rust, C++<br />
-                        <strong>Software:</strong> Solidworks, Autodesk Inventor, Excel<br />
-                        <strong>Languages:</strong> Spanish (Native), English (Advanced), Portuguese (Intermediate)</p>
-                    </section>
-
-					<section>
-						<h2>Publications</h2>
-						<ul>
-							<li>
-								<strong>Design and Control of a Fabric Vacuum-Powered Artificial Muscle for Rehabilitation Devices</strong>
-								<br />
-								<em><strong>Cancán S.</strong>, Vela E. </em> (2024). Accepted at 21st IEEE Latin American Robotics Symposium (LARS).
-							</li>
-							<li>
-								<strong>Versatile Vacuum-Powered Artificial Muscles Through Replaceable External Reinforcements</strong>
-								<br />
-								<em>Mendoza MJ, <strong>Cancán S.</strong>, Surichaqui S, Centeno E, Vilchez R, Bertoldi K, Vela EA</em> (2024). Frontiers in Robotics and AI. DOI: 10.3389/frobt.2023.1289074.
-							</li>
-							<li>
-								<strong>Synthesis of Planar Linkages Using Optimization Methods</strong>
-								<br />
-								<em>Martínez M, Venero S, <strong>Cancán S.</strong>, Quino G, Alegria EJ</em> (2022). In Proceedings of the 7th Brazilian Technology Symposium (BTSym’21). Springer, Cham.
-							</li>
-						</ul>
-					</section>
-					
-
-                    <section>
-                        <h2>Volunteering and Leadership</h2>
-                        <ul>
-                            <li><strong>Peer Mentor, UTEC</strong> (Mar 2022 - Dec 2023): Guided undergraduate students.</li>
-                            <li><strong>Vice President, Bisor UTEC</strong> (Mar 2022 - Dec 2022): Promoted soft robotics education.</li>
-                        </ul>
-                    </section>
-                </div>
-            </section>
+    <!-- Main -->
+    <section class="about-section">
+        <div class="about-hero">
+            <img src="images/about/sergioretrato.jpeg" alt="Sergio Cancan portrait" />
+            <h1>Sergio Cancan</h1>
+            <p>Mechatronics Engineer passionate about robotics, machine learning, and photography.</p>
         </div>
-            <!-- Two -->
-            <section id="two">
-                <div class="inner">
-                    <header class="major">
-                        <h2>Fun fact about me</h2>
-                    </header>
-                    <p>- In my free time, I enjoy taking photos about old buildings and wildlife.<br /> 
-                       - Music also plays a significant role in my life. I enjoy playing the guitar and collecting vinyl records. <br /> 
-                       - I also enjoy riding my bike in my free time and capturing pictures during my breaks. </p>
-                </div>
-            </section>
-            <!-- Footer -->
-            <footer id="footer">
-                <div class="inner">
-                    <ul class="icons">
-                        <li><a href="https://github.com/sergiocancan" class="icon brands alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-                        <li><a href="https://pe.linkedin.com/in/sergio-cancan" class="icon brands alt fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-                        <li><a href="https://scholar.google.com/citations?hl=en&user=PK62B7wAAAAJ" class="icon solid alt fa-graduation-cap" target="_blank"><span class="label">Google Scholar</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; Sergio Cancán</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-                    </ul>
-                </div>
-            </footer>
+
+        <!-- Gallery -->
+        <div class="gallery">
+            <img src="images/landscape.jpg" alt="Landscape" />
+            <img src="images/palca_mainsq.jpg" alt="Photography" />
+            <img src="images/puertacolegio.jpg" alt="School" />
+            <img src="images/bebe.jpg" alt="Robotics" />
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+
+        <!-- Personal Section -->
+        <div class="section personal">
+            <h2>My Journey</h2>
+
+            <h3>What have I done?</h3>
+            <p>Over the past few years, I’ve explored different sides of engineering and creativity — from building soft robots and experimenting with artificial muscles to working on machine learning solutions for real-world applications. I’ve also spent time with photography, capturing places and moments that remind me of balance and simplicity. For me, engineering and art are two ways of understanding the same thing: how systems — mechanical or human — can move, adapt, and express purpose.</p>
+
+            <h3>Why did I do it?</h3>
+            <p>I’ve always been fascinated by how things work. Whether it’s the motion of a robot or the light in a photograph, I enjoy learning by creating. Curiosity drives me — I like diving deep into challenges and connecting ideas from different fields. I believe that good design comes from empathy and observation, not just equations or code.</p>
+
+            <h3>What’s next?</h3>
+            <p>I’m continuing to explore robotics, machine learning, and design — but also giving space to creativity and photography. I want to build systems that not only perform well but also feel intuitive and meaningful. If you’d like to collaborate, share ideas, or just talk about technology and art, I’d love to hear from you.</p>
+
+        </div>
+
+        <div class="section">
+            <h2>Summary</h2>
+            <p>Diligent and innovative Mechatronics Engineering student at Universidad de Ingeniería y Tecnología (UTEC). Demonstrated skills in high-level engineering challenges, research on vacuum-powered artificial muscles, and API development with machine learning for industrial applications.</p>
+        </div>
 
 
-    </div>
+        <a href="resume.html" class="btn-resume">View Full Resume</a>
+    </section>
 
-    <!-- Scripts -->
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; Sergio Cancan. All rights reserved.</p>
+    </footer>
+
     <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <!-- Lightbox Script -->
+    <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const captionText = document.getElementById("lightbox-caption");
+        const closeBtn = document.getElementsByClassName("lightbox-close")[0];
+        const galleryImages = document.querySelectorAll(".gallery img");
+
+        galleryImages.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "block";
+                lightboxImg.src = img.src;
+                captionText.innerHTML = img.alt;
+            });
+        });
+
+        closeBtn.onclick = () => { lightbox.style.display = "none"; };
+        lightbox.onclick = (e) => {
+            if (e.target === lightbox) lightbox.style.display = "none";
+        };
+    </script>
 </body>
 </html>
