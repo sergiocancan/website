@@ -34,6 +34,11 @@
             width: 100%;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.02);
         }
         .section {
             margin-top: 4em;
@@ -78,11 +83,54 @@
         .section a:hover {
             text-decoration: underline;
         }
-        /* Personal section background */
         .section.personal {
             background: #f6f8fa;
             border-radius: 12px;
             padding: 3em 2em;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 10px;
+        }
+        .lightbox-caption {
+            text-align: center;
+            color: #ccc;
+            padding: 10px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .lightbox-close:hover {
+            color: #bbb;
+        }
+        @media (max-width: 700px) {
+            .lightbox-content {
+                width: 95%;
+            }
         }
     </style>
 </head>
@@ -108,6 +156,7 @@
             <p>Mechatronics Engineer passionate about robotics, machine learning, and photography.</p>
         </div>
 
+        <!-- Gallery -->
         <div class="gallery">
             <img src="images/landscape.jpg" alt="Landscape" />
             <img src="images/palca_mainsq.jpg" alt="Photography" />
@@ -115,7 +164,14 @@
             <img src="images/bebe.jpg" alt="Robotics" />
         </div>
 
-        <!-- Personal section -->
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+
+        <!-- Personal Section -->
         <div class="section personal">
             <h2>My Journey</h2>
 
@@ -128,18 +184,11 @@
             <h3>What’s next?</h3>
             <p>I’m continuing to explore robotics, machine learning, and design — but also giving space to creativity and photography. I want to build systems that not only perform well but also feel intuitive and meaningful. If you’d like to collaborate, share ideas, or just talk about technology and art, I’d love to hear from you.</p>
 
-            <p>📬 <strong>Let’s connect:</strong> <a href="mailto:sergio.cancan@utec.edu.pe">sergio.cancan@utec.edu.pe</a></p>
         </div>
 
         <div class="section">
             <h2>Summary</h2>
             <p>Diligent and innovative Mechatronics Engineering student at Universidad de Ingeniería y Tecnología (UTEC). Demonstrated skills in high-level engineering challenges, research on vacuum-powered artificial muscles, and API development with machine learning for industrial applications.</p>
-        </div>
-
-        <div class="section">
-            <h2>Education</h2>
-            <p><strong>Universidad de Ingeniería y Tecnología (UTEC)</strong><br>
-            Bachelor of Mechatronics Engineering (Top 33% - GPA: 2.99)</p>
         </div>
 
 
@@ -156,5 +205,27 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Lightbox Script -->
+    <script>
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+        const captionText = document.getElementById("lightbox-caption");
+        const closeBtn = document.getElementsByClassName("lightbox-close")[0];
+        const galleryImages = document.querySelectorAll(".gallery img");
+
+        galleryImages.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "block";
+                lightboxImg.src = img.src;
+                captionText.innerHTML = img.alt;
+            });
+        });
+
+        closeBtn.onclick = () => { lightbox.style.display = "none"; };
+        lightbox.onclick = (e) => {
+            if (e.target === lightbox) lightbox.style.display = "none";
+        };
+    </script>
 </body>
 </html>
