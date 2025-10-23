@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>About - Sergio Cancan</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        body {
+            background-color: #fafafa;
+        }
+        .about-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4em 2em;
+            text-align: center;
+        }
+        .about-hero img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1em;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1em;
+            margin-top: 2em;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-top: 4em;
+            text-align: left;
+        }
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.4em;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+        p, li {
+            color: #555;
+            line-height: 1.6;
+        }
+        ul {
+            margin-left: 1.2em;
+        }
+        .btn-resume {
+            display: inline-block;
+            margin-top: 2em;
+            padding: 0.75em 2em;
+            background-color: #4a90e2;
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn-resume:hover {
+            background-color: #3a7ad9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <a href="index.html" class="logo">Sergio Cancan</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <section class="about-section">
+        <div class="about-hero">
+            <img src="assets/images/about/profile_sample.jpg" alt="Sergio Cancan portrait" />
+            <h1>Sergio Cancan</h1>
+            <p>Mechatronics Engineer passionate about robotics, machine learning, and photography.</p>
+        </div>
+
+        <div class="gallery">
+            <img src="assets/images/about/landscape1.jpg" alt="Landscape" />
+            <img src="assets/images/about/robotics.jpg" alt="Robotics" />
+            <img src="assets/images/about/photography.jpg" alt="Photography" />
+        </div>
+
+        <div class="section">
+            <h2>Summary</h2>
+            <p>Diligent and innovative Mechatronics Engineering student at Universidad de Ingeniería y Tecnología (UTEC). Demonstrated skills in high-level engineering challenges, research on vacuum-powered artificial muscles, and API development with machine learning for industrial applications.</p>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <p><strong>Universidad de Ingeniería y Tecnología (UTEC)</strong><br>
+            Bachelor of Mechatronics Engineering (Top 33% - GPA: 3.00)</p>
+        </div>
+
+        <div class="section">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Culqi</strong> – Trainee of Machine Learning Engineer (Apr 2024 - Present)<br> Transitioned local ML solutions to AWS cloud; optimized deployment strategies.</li>
+                <li><strong>UTEC Micro & Biorobotics Lab</strong> – Research Assistant (Apr 2023 - Jul 2023)<br> Designed vacuum-powered artificial muscles and prototypes for exoskeletons.</li>
+                <li><strong>Rimac Seguros y Reaseguros</strong> – Trainee of Machine Learning Engineer (Jan 2023 - Mar 2023)<br> Developed APIs with ML models for integration; enhanced department frameworks.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming:</strong> Python, MATLAB, SQL, Rust, C++</li>
+                <li><strong>Software:</strong> Solidworks, Autodesk Inventor, Excel</li>
+                <li><strong>Languages:</strong> Spanish (Native), English (Advanced), Portuguese (Intermediate)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Publications</h2>
+            <ul>
+                <li><em>Design and Control of a Fabric Vacuum-Powered Artificial Muscle for Rehabilitation Devices</em> — Cancán S., Vela E. (2024). Accepted at 21st IEEE Latin American Robotics Symposium (LARS).</li>
+                <li><em>Versatile Vacuum-Powered Artificial Muscles Through Replaceable External Reinforcements</em> — Mendoza MJ, Cancán S., Surichaqui S, Centeno E, Vilchez R, Bertoldi K, Vela EA (2024). <em>Frontiers in Robotics and AI.</em></li>
+                <li><em>Synthesis of Planar Linkages Using Optimization Methods</em> — Martínez M, Venero S, Cancán S., Quino G, Alegria EJ (2022). In Proceedings of the 7th Brazilian Technology Symposium (BTSym’21). Springer, Cham.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Volunteering and Leadership</h2>
+            <ul>
+                <li><strong>Peer Mentor, UTEC</strong> (Mar 2022 - Dec 2023) — Guided undergraduate students.</li>
+                <li><strong>Vice President, Bisor UTEC</strong> (Mar 2022 - Dec 2022) — Promoted soft robotics education.</li>
+            </ul>
+        </div>
+
+        <a href="resume.html" class="btn-resume">View Full Resume</a>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; Sergio Cancan. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
